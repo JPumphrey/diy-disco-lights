@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
         switchOn.setOnClickListener {
             scope.launch(Dispatchers.IO) {
                 try {
-                    model.switchOn(1)
+                    model.startFlashing()
                 } catch (t: Throwable) {
                     Log.e("jmp", "got error ", t)
                 }
@@ -56,7 +56,7 @@ class HomeFragment : Fragment() {
         switchOff.setOnClickListener {
             scope.async(Dispatchers.IO) {
                 try {
-                    model.switchOff(1)
+                    model.stopFlashing()
                 } catch (t: Throwable) {
                     Log.e("jmp", "got error ", t)
                 }
