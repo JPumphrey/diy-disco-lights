@@ -1,13 +1,14 @@
 package com.example.diydiscolights.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 
 class HomeViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    val flashing = MutableLiveData<Boolean>().apply {
+        value = false
     }
-    val text: LiveData<String> = _text
+
+    val bpm = MutableLiveData<Int>().apply {
+        value = 120
+    }
 }
