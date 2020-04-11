@@ -8,4 +8,4 @@ Stay home? Still party. Makes hue lights flash
  defaultip=YOUR_BRIDGE_IP_ADDRESS
  defaultusername=YOUR_USERNAME_STRING
  ```
-When the setup tab is complete, you should be able to set them there instead. You may also need to set your light ID numbers in `HomeFragment.java`.
+When the setup tab is implemented (https://github.com/JPumphrey/diy-disco-lights/issues/1), you should be able to set them there instead. You may also need to set your light ID numbers in `HomeFragment.java` (https://github.com/JPumphrey/diy-disco-lights/issues/2).
