@@ -16,6 +16,8 @@ import com.example.diydiscolights.R
 import com.example.diydiscolights.model.FlashController
 import com.example.diydiscolights.model.SetupState
 
+private val LIGHTS_TO_USE = listOf(1, 2)
+
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
@@ -65,7 +67,7 @@ class HomeFragment : Fragment() {
         flashController = FlashController(
             BuildConfig.defaultip,
             BuildConfig.defaultusername,
-            SetupState(listOf(1, 2)),
+            SetupState(LIGHTS_TO_USE),
             homeViewModel.viewModelScope)
 
         flashSwitch.setOnCheckedChangeListener { _, isChecked ->
